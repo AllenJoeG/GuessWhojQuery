@@ -7,7 +7,8 @@ function jqReady() {
   console.log(people); // Properly accessing data.js!
   renderGuessWhoPanels(people);
   $('img').on('click', imageClick);
-
+  gameLogic();
+  
 };
 
 // Function renders all the images from provided array's githubUsername profile picture
@@ -27,6 +28,7 @@ function renderGuessWhoPanels(array){
 function imageClick() {
   // $(this).data()
   console.log($(this).data());
+  // if ($(this).data() === )
   
 }; // end imageClick
 
@@ -36,8 +38,18 @@ function randomNumber(min, max){
 }; // end randomNumber
 
 // This is the min and max of our people []
-console.log(randomNumber(0, (people.length - 1)));
+function generateNameToPick() {
+  randomIndex = randomNumber(0, (people.length - 1));
+  return currentName = people[randomIndex].name;
+}
 
+function renderNameToPick(name) {
+  $('.nameToPick').text(`${name}`);  
+}
 
+function gameLogic() {
+  let currentName = generateNameToPick();
+  renderNameToPick(currentName);
+  console.log(currentName);
 
-
+}
