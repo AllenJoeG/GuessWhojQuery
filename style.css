@@ -1,5 +1,27 @@
+body {
+  background-color: thistle;
+}
+
+.namePrompt {
+  background-color:rgba(0, 0, 139, .6);
+  height: 2.5em;
+  text-align:center;
+  width: 20%;
+  color: wheat;
+  margin-bottom: 1em;
+}
+
+.textDiv {
+  background-color:rgba(0, 0, 139, .6);
+  height: 4em;
+  width: 20%;
+  color: wheat;
+  margin-bottom: 1em;
+}
+
 .guessWhoDiv {
   width: 95%;
+  border: solid wheat 2px;
   /* display: flex;
   flex-direction: column-reverse;
    */
@@ -9,4 +31,5 @@ img {
   height: 250px;
   width: 250px;
   margin: 5px;
+  border: dashed wheat 2px;
 }
